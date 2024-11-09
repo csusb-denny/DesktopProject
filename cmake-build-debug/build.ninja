@@ -55,6 +55,12 @@ build CMakeFiles/DesktopProject.dir/main.cpp.o: CXX_COMPILER__DesktopProject_uns
   OBJECT_DIR = CMakeFiles/DesktopProject.dir
   OBJECT_FILE_DIR = CMakeFiles/DesktopProject.dir
 
+build CMakeFiles/DesktopProject.dir/Original.cpp.o: CXX_COMPILER__DesktopProject_unscanned_Debug /Users/denny/DesktopProject/Original.cpp || cmake_object_order_depends_target_DesktopProject
+  DEP_FILE = CMakeFiles/DesktopProject.dir/Original.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/DesktopProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/DesktopProject.dir
+
 build CMakeFiles/DesktopProject.dir/FileHandler.cpp.o: CXX_COMPILER__DesktopProject_unscanned_Debug /Users/denny/DesktopProject/FileHandler.cpp || cmake_object_order_depends_target_DesktopProject
   DEP_FILE = CMakeFiles/DesktopProject.dir/FileHandler.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
@@ -69,7 +75,7 @@ build CMakeFiles/DesktopProject.dir/FileHandler.cpp.o: CXX_COMPILER__DesktopProj
 #############################################
 # Link the executable DesktopProject
 
-build DesktopProject: CXX_EXECUTABLE_LINKER__DesktopProject_Debug CMakeFiles/DesktopProject.dir/main.cpp.o CMakeFiles/DesktopProject.dir/FileHandler.cpp.o
+build DesktopProject: CXX_EXECUTABLE_LINKER__DesktopProject_Debug CMakeFiles/DesktopProject.dir/main.cpp.o CMakeFiles/DesktopProject.dir/Original.cpp.o CMakeFiles/DesktopProject.dir/FileHandler.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
   OBJECT_DIR = CMakeFiles/DesktopProject.dir
   POST_BUILD = :

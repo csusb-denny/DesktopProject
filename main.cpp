@@ -1,26 +1,37 @@
 #include <iostream>
-#include "FileHandler.h"
+#include "FileHandler.h"  // Assuming this is where your function declarations are
 
-using namespace std;
-
-const string DESKTOP_PATH = "/Users/denny/Desktop";
-
-
-
-int main()
-{
-    vector<string> files = listDesktopFiles(DESKTOP_PATH);              //List files and filter as needed
-
-    for (const auto& file : files)                           //process and display files (unit testing)
-    {
-        if(!isExcludedFileType(file))
-        {
-            cout << file << " (Included)\n";
-        }
-        else
-        {
-            cout << file << " (Excluded)\n";
-        }
+int main() {
+    try {
+        // Call the function to organize the desktop files
+        organizeDesktop();
+        std::cout << "Desktop cleanup completed successfully." << std::endl;
+    } catch (const std::exception& e) {
+        // Catch any unexpected errors and display a message
+        std::cerr << "An error occurred: " << e.what() << std::endl;
     }
+
     return 0;
 }
+
+/*int main()
+{
+    fs::path source = "/Users/denny/Desktop/testfile.txt";
+    fs::path destination = "/Users/denny/Desktop/Trash/testfile.txt";
+
+    try
+    {
+        if (!fs::exists(destination.parent_path()))
+        {
+           fs::create_directory(destination.parent_path());
+        }
+        fs::rename(source, destination);
+        cout << "Moved file to: " << destination << endl;
+    }
+    catch(const fs::filesystem_error& e){
+        cerr << "File moved error: " << e.what() << endl;
+    }
+
+    return 0;
+}
+*/
